@@ -44,27 +44,31 @@ const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTnOX6oYg
 
   traces.forEach((t) => traceIO.observe(t));
 
-  // copy server address
-  const copyBtn = document.getElementById('copyBtn');
-  const addressEl = document.getElementById('serverAddress');
+  // copy server address / port
+  function wireCopyButton(buttonId, sourceId) {
+    const btn = document.getElementById(buttonId);
+    const src = document.getElementById(sourceId);
+    if (!btn || !src) return;
 
-  if (copyBtn && addressEl) {
-    copyBtn.addEventListener('click', async () => {
-      const text = addressEl.textContent.trim();
+    btn.addEventListener('click', async () => {
+      const text = src.textContent.trim();
       try {
         await navigator.clipboard.writeText(text);
       } catch (err) {
         // clipboard API unavailable — fall back silently
       }
-      const original = copyBtn.textContent;
-      copyBtn.textContent = 'COPIED';
-      copyBtn.classList.add('copied');
+      const original = btn.textContent;
+      btn.textContent = 'COPIED';
+      btn.classList.add('copied');
       setTimeout(() => {
-        copyBtn.textContent = original;
-        copyBtn.classList.remove('copied');
+        btn.textContent = original;
+        btn.classList.remove('copied');
       }, 1500);
     });
   }
+
+  wireCopyButton('copyBtn', 'serverAddress');
+  wireCopyButton('copyPortBtn', 'serverPort');
 
   // ---------- build registry ----------
 

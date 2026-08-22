@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yama Minecraft Server</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Noto Sans JP", sans-serif;
+            background: #ffffff;
+            color: #111111;
+            line-height: 1.7;
+        }
+
+        header {
+            border-bottom: 1px solid #cccccc;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555555;
+        }
+
+        nav {
+            border-bottom: 1px solid #cccccc;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: #111111;
+            margin-right: 15px;
+            text-decoration: underline;
+        }
+
+        nav a:hover {
+            color: #555555;
+        }
+
+        main {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #111111;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            margin-top: 30px;
+        }
+
+        .box {
+            border: 1px solid #cccccc;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .command {
+            font-family: Consolas, monospace;
+            background: #f3f3f3;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .map-link {
+            display: inline-block;
+            border: 1px solid #111111;
+            padding: 10px 15px;
+            color: #111111;
+            text-decoration: none;
+        }
+
+        .map-link:hover {
+            background: #eeeeee;
+        }
+
+        footer {
+            border-top: 1px solid #cccccc;
+            padding: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #555555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <h1>Yama Minecraft Server</h1>
+        <p>公式サイト</p>
+    </header>
+
+    <!-- メニュー -->
+    <nav>
+        <a href="#rule">ルール</a>
+        <a href="#admin">管理者情報</a>
+        <a href="map.html">サーバーマップ</a>
+        <a href="#command">便利コマンド</a>
+    </nav>
+
+    <main>
+
+        <!-- サーバーについて -->
+        <section id="about">
+            <h2>サーバーについて</h2>
+
+            <p>
+                Yama Minecraft Serverの公式サイトです。<br>
+                サーバーに参加しているメンバー向けに、ルールや便利な情報を掲載しています。
+            </p>
+        </section>
+
+
+        <!-- ルール -->
+        <section id="rule">
+            <h2>ルール</h2>
+
+            <div class="box">
+                <ol>
+                    <li>他のプレイヤーに迷惑をかけない</li>
+                    <li>他人の建築物やアイテムを勝手に壊したり盗んだりしない</li>
+                    <li>荒らし行為をしない</li>
+                    <li>不具合やバグを悪用しない</li>
+                    <li>チャットでは相手を不快にさせる発言をしない</li>
+                    <li>運営の指示には従う</li>
+                </ol>
+            </div>
+
+            <p>
+                ルール違反が確認された場合、内容によっては警告・処罰などを行う場合があります。
+            </p>
+        </section>
+
+
+        <!-- 管理者情報 -->
+        <section id="admin">
+            <h2>管理者・運営情報</h2>
+
+            <div class="box">
+                <h3>サーバー運営・副管理者</h3>
+                <p>
+                    <strong>Yama</strong><br>
+                    サーバーの運営、設定、再起動などを担当しています。<br>
+                    サーバー内では副管理者として活動しています。
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>サーバー内管理者</h3>
+                <p>
+                    <strong>にわかじゃんかー</strong><br>
+                    サーバー内の管理者として、管理や対応を行っています。
+                </p>
+            </div>
+        </section>
+
+
+        <!-- サーバーマップ -->
+        <section id="map">
+            <h2>サーバーマップ</h2>
+
+            <p>
+                サーバーの地図は専用ページから確認できます。
+            </p>
+
+            <a class="map-link" href="http://yama0027.f5.si:8100">
+                サーバーマップを開く
+            </a>
+        </section>
+
+
+        <!-- 便利コマンド -->
+        <section id="command">
+            <h2>メンバー向け便利コマンド</h2>
+
+            <p>
+                メンバーが使用できる主な便利コマンドです。
+            </p>
+
+
+            <h3>移動・自宅</h3>
+
+            <div class="box">
+                <p>
+                    <span class="command">/spawn</span><br>
+                    スポーン地点へ移動します。
+                </p>
+
+                <p>
+                    <span class="command">/sethome</span><br>
+                    自宅を設定します。
+                </p>
+
+                <p>
+                    <span class="command">/home</span><br>
+                    設定した自宅へ移動します。
+                </p>
+
+                <p>
+                    <span class="command">/delhome</span><br>
+                    設定した自宅を削除します。
+                </p>
+            </div>
+
+
+            <h3>プレイヤーとのやりとり</h3>
+
+            <div class="box">
+                <p>
+                    <span class="command">/tpa 名前</span><br>
+                    指定したプレイヤーへテレポートする許可を申請します。
+                </p>
+
+                <p>
+                    <span class="command">/tpaccept</span><br>
+                    届いているテレポート申請を承認します。
+                </p>
+
+                <p>
+                    <span class="command">/tpdeny</span><br>
+                    届いているテレポート申請を拒否します。
+                </p>
+
+                <p>
+                    <span class="command">/msg 名前 メッセージ</span><br>
+                    指定したプレイヤーに個人メッセージを送信します。
+                </p>
+
+                <p>
+                    <span class="command">/r メッセージ</span><br>
+                    最後に個人メッセージを送ってきた相手へ返信します。
+                </p>
+            </div>
+
+
+            <h3>スキン変更</h3>
+
+            <div class="box">
+                <p>
+                    <span class="command">/skin 名前</span><br>
+                    指定した名前のスキンに変更します。
+                </p>
+
+                <p>
+                    <span class="command">/skin clear</span><br>
+                    設定したスキンを元に戻します。
+                </p>
+            </div>
+
+
+            <h3>便利機能</h3>
+
+            <div class="box">
+                <p>
+                    <strong>VeinMiner</strong><br>
+                    対応したブロックをまとめて破壊できる便利な機能です。
+                </p>
+
+                <p>
+                    <strong>バックパック機能</strong><br>
+                    アイテムを追加で持ち運べるバックパック機能が利用できます。
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- フッター -->
+    <footer>
+        © Yama Minecraft Server
+    </footer>
+
+</body>
+</html>
